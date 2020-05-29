@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <h1>Hello ,Student</h1>
+        <div style="text-align: right;">
+            <p></p>
+            <h2><a href="{{ url_for('adminlogout') }}">Log Out</a></h2>    
+
+        </div>
+        <br>
+        <br>
+        <h3>Attendance Record</h3>
+        <table style="border:2px solid blue; border-collapse: collapse; width:80%;">
+            <tr>
+                <th style="border:1px solid black; padding:10px;text-align: center;">Day</th>
+                <th style="border:1px solid black; padding:10px;text-align: center;">Month</th>
+                <th style="border:1px solid black; padding:10px;text-align: center;">Year</th>
+                <th style="border:1px solid black; padding:10px;text-align: center;">Attendance</th>
+            </tr>
+
+        
+          {% for att in attendance %}
+          <div>
+            <tr height="100">
+            <td  style="border:1px solid black; padding:10px;text-align: center;"> {{att.day}}</a></td>
+            <td  style="border:1px solid black; padding:10px;text-align: center;"> {{att.month}}</td>
+            <td  style="border:1px solid black; padding:10px;text-align: center;"> {{att.year}}</td>
+            <td  style="border:1px solid black; padding:10px;text-align: center;"> {{att.status}}</td>
+            </tr>
+            
+        </div>
+          
+          {% endfor %}
+          <div style="background-color: aqua;">
+            
+            <h3>Total    : {{ total }}</h3>
+            <h3>Present    : {{ present }}</h3>
+            <h3>Percent    : {{ percent }} %</h3>
+            
+         </div>
+      </table>
+
+
+{% endblock %}

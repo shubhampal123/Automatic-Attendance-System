@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <h1>Hello ,Admin</h1>
+        <div style="text-align: right;">
+            <p></p>
+            <h2><a href="{{ url_for('adminlogout') }}">Log Out</a></h2>    
+
+        </div>
+        <br>
+        <br>
+        <div class="column is-4 is-offset-4">
+            <h3 class="title">Add Student</h3>
+            <div class="box">
+                <form method="POST" action="/add_student">
+                    <div class="field">
+                        <div class="control">
+                            <input required class="input is-large"  type="text" name="rollno" placeholder="Roll No" autofocus="">
+                        </div>
+                    </div>
+        
+                    <div class="field">
+                        <div class="control">
+                            <input required class="input is-large" type="email" name="email_id" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <input required class="input is-large" type="text" name="name" placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <input required class="input is-large" type="text" name="branch" placeholder="Branch">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <input required class="input is-large" type="text" name="section" placeholder="Section">
+                        </div>
+                    </div>
+                   
+                    <button class="button is-block is-info is-large is-fullwidth">Proceed</button>
+                </form>
+            </div>
+        </div>
+        
+
+
+{% endblock %}

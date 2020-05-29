@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <h1>Hello ,Admin</h1>
+        <div style="text-align: right;">
+            <p></p>
+            <h2><a href="{{ url_for('adminlogout') }}">Log Out</a></h2>    
+
+        </div>
+        <br>
+        <br>
+        <div style="text-align: center;">
+            <p></p>
+            <h2><a href="{{ url_for('add_student') }}">Add Student</a></h2>    
+
+        </div>
+
+        <div style="text-align: center;">
+            <p></p>
+            <h2><a href="{{ url_for('update_attendance') }}">Update Attendance</a></h2>    
+
+        </div>
+
+        
+
+
+{% endblock %}
